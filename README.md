@@ -79,11 +79,13 @@ CalendarListview is fully customizable:
 
 ### Contact
 
-You can reach me at [+RobinChutaux](https://plus.google.com/+RobinChutaux) or for technical support feel free to open an issue [here](https://github.com/traex/CalendarListview/issues) :)
+You can reach me at [+Saleem](https://plus.google.com/u/0/112062339728891068042) or for technical support feel free to open an issue [here](https://github.com/traex/CalendarListview/issues) :)
 
 ### Acknowledgements
 
 Thanks to [Flavien Laurent](https://github.com/flavienlaurent) for his [DateTimePicker](https://github.com/flavienlaurent/datetimepicker).
+
+Thanks to  [+RobinChutaux](https://plus.google.com/+RobinChutaux) for his original library [here](https://github.com/traex/CalendarListview)
 
 ### MIT License
 
