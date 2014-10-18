@@ -12,14 +12,20 @@ import com.andexert.calendarlistview.library.DayPickerView;
 public class MainActivity extends Activity implements com.andexert.calendarlistview.library.DatePickerController {
 
     private DayPickerView dayPickerView;
-
+    Calendar calendar;
+    int minYear= 2013; //Setup Ranges
+    int maxYear=2020;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+         calendar = Calendar.getInstance();
         dayPickerView = (DayPickerView) findViewById(R.id.pickerView);
         dayPickerView.setmController(this);
+        //Get difference of current Year and Min year
+          int difference = calendar.get(calendar.YEAR)-minYear;
+         dayPickerView.setSelection(difference*12);
+         //Scroll to it
     }
 
 
@@ -45,7 +51,15 @@ public class MainActivity extends Activity implements com.andexert.calendarlistv
     @Override
     public int getMaxYear()
     {
-        return 2015;
+        return maxYear;
+          //maxYear being the year you defined as a variable
+    }
+
+    @Override
+    public int getMinYear()
+    {
+        return minYear;
+        //minYear being the year you defined as a variable.
     }
 
     @Override
