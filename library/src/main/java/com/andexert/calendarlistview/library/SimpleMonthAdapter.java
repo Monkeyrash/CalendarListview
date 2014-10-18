@@ -56,7 +56,7 @@ public class SimpleMonthAdapter extends BaseAdapter implements SimpleMonthView.O
 	}
 
 	public int getCount() {
-        return ((mController.getMaxYear() - calendar.get(Calendar.YEAR)) + 1) * MONTHS_IN_YEAR;
+        return ((mController.getMaxYear() - mController.getMinYear() + 1) * MONTHS_IN_YEAR;
 	}
 
 	public Object getItem(int position) {
@@ -89,7 +89,7 @@ public class SimpleMonthAdapter extends BaseAdapter implements SimpleMonthView.O
         if (startCurrentMonth)
         {
             month = (calendar.get(Calendar.MONTH) + (position % MONTHS_IN_YEAR)) % MONTHS_IN_YEAR;
-            year = position / MONTHS_IN_YEAR + calendar.get(Calendar.YEAR) + ((calendar.get(Calendar.MONTH) + (position % MONTHS_IN_YEAR)) / MONTHS_IN_YEAR);
+            year = position / MONTHS_IN_YEAR + mController.getMinYear() + ((calendar.get(Calendar.MONTH) + (position % MONTHS_IN_YEAR)) / MONTHS_IN_YEAR);
         }
         else
         {
